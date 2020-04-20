@@ -1,4 +1,8 @@
-# 手把手教你写makefile (一)
+# makefile学习 (一)
+
+---
+
+## makefile的组成
 
 `makefile` 由一系列`规则(rule)`组成，这些`规则`的基本格式如下：
 ```makefile
@@ -17,6 +21,9 @@ target … : prerequisites …
 
 
 除了`规则`之外，`makefile`也会包含一些其他文本，比如，变量(前文所述的`.RECIPEPREFIX`就是一个特殊的变量)等。
+
+
+## 举个栗子
 
 讲完了，最最最基本的`makefile`的组成，我们举个栗子吧。我们只有一个基本的main.c的文件, 并且`makefile`与main.c在同一个目录下。
 ```makefile
@@ -38,7 +45,7 @@ clean:
 
 ```
 
-----
+## 打个比喻
 
 我们再打个比喻吧，把`makefile`理解成做菜的清单，比如：做"回锅肉"的`makefile`应该长成这样，当然了，菜单种可能还有"红烧肉"、"水煮肉"... 哇，我饿了！
 ```makefile
