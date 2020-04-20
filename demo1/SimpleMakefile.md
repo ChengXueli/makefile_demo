@@ -4,7 +4,15 @@
 
 ## makefile的组成
 
-`makefile` 由一系列`规则(rule)`组成，这些`规则`的基本格式如下：
+|组成部分|描述                |
+|:---:  |:---                |
+|显式规则|explicit rule，用于指明何时及怎样编译构建文件     |
+|隐式规则|implicit rule，用于指明何时及怎样基于他们的文件名构建文件    |
+|变量定义|variable definition，`name=value`的形式，引用的时候使用`$(name)`|
+|指令语句|directive, 执行特定的动作，如：包含另一个makefile、条件语句、 变量的多行定义 |
+|注释    |comment，以 `#` 号开头|
+
+最主要的，`makefile` 由一系列`规则(rule)`组成，这些`规则`的基本格式如下：
 ```makefile
 target … : prerequisites …
            recipe
@@ -34,6 +42,8 @@ main: main.c
 $ gcc main.c -o main
 # 演示一下这些命令在同一行吧,其实就是linux shell 命令的连接&
 $ cat main.c & wc main.c
+# 也可以用分号
+$ cat main.c ; wc main.c
 
 # 恢复成默认的tab
 .RECIPEPREFIX =
